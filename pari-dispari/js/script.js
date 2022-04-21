@@ -6,7 +6,9 @@
 // Dichiariamo chi ha vinto.
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-const askEvenOrOdd = prompt(`Pari o dispari?`);
+const re = /[\W_]/g;
+
+const askEvenOrOdd = prompt(`Pari o dispari?`).toLowerCase().replace(re,"");
 console.log(askEvenOrOdd);
 
 const randomUserNumber = parseInt(prompt(`Dimmi un numero tra 1 e 5`));
